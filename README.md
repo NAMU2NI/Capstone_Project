@@ -36,13 +36,42 @@ Hence the first method was preferred than the second method and data set is also
 Automl config class is way of leveraging the SDK to automate ML , Below are the different parameters which have been used in my model : 
 
 Task Type : Classification , here in this problem we would like to predict whether an account will go bankrupt or not 
+
 training dataset : POC Dataset , data which has all the features except the POC ID and hte bankruptcy month 
+
 label column : Target column which specifies whether a POC has gone bankrupt or not 
+
 enable_early_stopping : Whether to enable early termination if the score is not improving in the short term 
+
 featurization: hether featurization step should be done automatically or not , in this project i have set it to auto which i would need to have more features in the model 
+
 max_concurrent_iterations: Represents the maximum number of iterations that would be executed in parallel 
+
 primary_metric: norm_macro_recall - since in the current project , focus is more on the preventing the FN , rather than the overall Accuracy Recall Maximization function has been used 
 
+### Results
+*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+
+First Iteration : 
+Automl model was run with the Primary metric : AUC Weighted , below is the screenshot of the name 
+
+![image](https://user-images.githubusercontent.com/92014201/144278323-e04bf573-3215-4bfc-94ee-c8115a1d4732.png)
+
+Problem with this model is that it really gives a very good overall accuracy , but when you look into the False Negative it is very high. For the current problem which we are trying to solve the False Negatives have to minimum , because if there is account in Actual bankrupt but the prediction says it is not a bankrupt is more critical because BM (beverage Manufacurer) will be losing the money which was given in credit if the pro active actions were not taken.  
+
+On the other hand , for False Positives which means Model predicts they are bankrupt customers and finally they are not bankrupt so it does not have any financial impact to the company. But while the False Negative will have Financial impact hence importance of the model should be focused more on reducing the False Negatives. 
+
+But in the below confusion matrix , even though we have an overall accuracy of 99.3% , the Recall is 0 because there are not True Positives in the below conufusion metrics. 
+Hence the Primary metric was changed for the second iteration to minimized the False Negatives , meaning the focus should to increase the Recall. 
+![image](https://user-images.githubusercontent.com/92014201/144278032-b2c2c7d2-4eda-456a-877d-e1ef75768c80.png)
 
 
+Second Iteration : 
+As discussed in the above  , primary metric was changed from "AUC WEIGHTED" to "NORM_MACRO_RECALL" , to improve the Recall accuracy, Below are the details which shows the completed status of the Auto Ml and also the confusion matrix for this model. 
+
+Screenshot of the Model showing , "NORM_MACRO_RECALL" as a primiary metric and its corresponding accuracy 
+![image](https://user-images.githubusercontent.com/92014201/144283199-80ce26c0-2fc8-4111-bb8d-48f494d948f8.png)
+
+Below screenshot shows the confusion metrics in which the Overall Accuracy has dropped to 94% but Recall Accuracy has increased to 82% which means that the False Negatives are minimum , here in this case it is only 5. And also the True Postives have improved to 23 right predictions.  
+![image](https://user-images.githubusercontent.com/92014201/144283941-28f5dbd0-b308-4f0d-9628-d047afb6766b.png) 
 
