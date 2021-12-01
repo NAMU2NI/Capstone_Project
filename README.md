@@ -52,7 +52,7 @@ primary_metric: norm_macro_recall - since in the current project , focus is more
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
-First Iteration : 
+## First Iteration : 
 Automl model was run with the Primary metric : AUC Weighted , below is the screenshot of the name 
 
 ![image](https://user-images.githubusercontent.com/92014201/144278323-e04bf573-3215-4bfc-94ee-c8115a1d4732.png)
@@ -66,7 +66,7 @@ Hence the Primary metric was changed for the second iteration to minimized the F
 ![image](https://user-images.githubusercontent.com/92014201/144278032-b2c2c7d2-4eda-456a-877d-e1ef75768c80.png)
 
 
-Second Iteration : 
+## Second Iteration : 
 As discussed in the above  , primary metric was changed from "AUC WEIGHTED" to "NORM_MACRO_RECALL" , to improve the Recall accuracy, Below are the details which shows the completed status of the Auto Ml and also the confusion matrix for this model. 
 
 Screenshot of the Model showing , "NORM_MACRO_RECALL" as a primiary metric and its corresponding accuracy 
@@ -74,4 +74,8 @@ Screenshot of the Model showing , "NORM_MACRO_RECALL" as a primiary metric and i
 
 Below screenshot shows the confusion metrics in which the Overall Accuracy has dropped to 94% but Recall Accuracy has increased to 82% which means that the False Negatives are minimum , here in this case it is only 5. And also the True Postives have improved to 23 right predictions.  
 ![image](https://user-images.githubusercontent.com/92014201/144283941-28f5dbd0-b308-4f0d-9628-d047afb6766b.png) 
+
+Model showing the current run status in the Model 
+![image](https://user-images.githubusercontent.com/92014201/144284614-feaac719-9596-4c17-98b2-6c109c742d04.png)
+
 
