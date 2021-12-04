@@ -79,3 +79,36 @@ Model showing the current run status in the Model
 ![image](https://user-images.githubusercontent.com/92014201/144284614-feaac719-9596-4c17-98b2-6c109c742d04.png)
 
 
+
+## Hyperparameter Tuning
+*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+
+In Hyperparameter tuning , we selected Random forest model , because ensemble model accuracy is always better than one model. For tuning RF model, we used below parameters : 
+
+#### Parameter Sampling 
+
+n_estimators : number of trees in the forest : used a discrete hyperparameters "Choice" it tries select the discrete values specified. in the current model depth of the trees were given a choice between 100 and 150 
+
+max_depth : The maximum depth of the tree. here again a discrete choice function is used with the below options 7,14,21,28,35,42
+
+max_features : The number of features to consider when looking for the best split: used a continous distribution hyperparameter space in the model numbers between 0.25 and 0.50 are unifomrly selected for multiple iterations 
+
+#### Early Termination Policy 
+ Bandit Early termination policy it helps to eliminate the runs early if hte accuracy is not improving for a  model. 
+
+#### Primary Metric Accuracy 
+Recall is used as the primary metric in the model , since the objective was to minimize the False Negatives and to maximize the Recall accuracy. Recall Accuracy have been mentioned as the Primary metric and is used in the model. 
+
+#### Max Concurrent runs 
+
+
+
+
+
+
+
+
+
+
+
+
