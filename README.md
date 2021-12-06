@@ -114,6 +114,11 @@ Below figure shows the various Hyperparameter tuning factors and its correspondi
 ![image](https://user-images.githubusercontent.com/92014201/144848147-13daac01-9ace-42f8-8395-faed6af2ab4c.png)
 
 
+Conculsion : There were no best model from Hyperparameter tuning , all the model had same accuracy as shown in the above model. Hence for Deployment the Model from the Automl was used to deploy the model. 
+
+## Model Deployment
+*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+
 
 
 
