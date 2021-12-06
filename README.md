@@ -87,7 +87,7 @@ In Hyperparameter tuning , we selected Random forest model , because ensemble mo
 
 #### Parameter Sampling 
 
-n_estimators : number of trees in the forest : used a discrete hyperparameters "Choice" it tries select the discrete values specified. in the current model depth of the trees were given a choice between 100 and 150 
+n_estimators : number of trees in the forest : used a discrete hyperparameters "Choice" it tries select the discrete values specified. in the current model depth of the trees were given a choice between 100 , 150 ,200,250,300 
 
 max_depth : The maximum depth of the tree. here again a discrete choice function is used with the below options 7,14,21,28,35,42
 
@@ -100,6 +100,19 @@ max_features : The number of features to consider when looking for the best spli
 Recall is used as the primary metric in the model , since the objective was to minimize the False Negatives and to maximize the Recall accuracy. Recall Accuracy have been mentioned as the Primary metric and is used in the model. 
 
 #### Max Concurrent runs 
+specified as 4 which means Maximum number of runs that can run concurrently. If not specified, all runs launch in parallel 
+
+#### Max Total runs
+Specified as 20 , maximum number of models created to train the model with the above iterations 
+
+In the current below model , shows the 20 iterations which were trained by iterating on the various Hyper parameter tuning techniques 
+
+![image](https://user-images.githubusercontent.com/92014201/144847989-7656e380-9ba7-4c45-b022-d399605a6010.png)
+
+Below figure shows the various Hyperparameter tuning factors and its corresponding accuracy , in the below case all the 20 iteration had the same accuracy of 25% 
+
+![image](https://user-images.githubusercontent.com/92014201/144848147-13daac01-9ace-42f8-8395-faed6af2ab4c.png)
+
 
 
 
