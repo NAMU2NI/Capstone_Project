@@ -119,7 +119,51 @@ Conculsion : There were no best model from Hyperparameter tuning , all the model
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
+### Model Register 
+Best Model was from the Auto ML which had an accuracy 74% so this model was identified and regsitered for the Deployment. 
+Model was registered from the local file , in the below screenshot PKL file of hte model was downloaded into the local file. 
+Than the Model was Registered with the Model Name and Model Path where the PKL file is locaated 
 
+![image](https://user-images.githubusercontent.com/92014201/145519050-0071bc47-04ef-47b6-987f-e7f912a47419.png)
+
+### Entry Script 
+An Entry script receives data submitted to a deployed web service and passes it to the model. It then returns the model's response to the client. The script is specific to your model.
+
+Loading the Model using the function init() and running hte model using run () function - this entry script is used in the deployment 
+![image](https://user-images.githubusercontent.com/92014201/145519622-f8c68d7d-9c55-4ae8-8f99-343c9201e632.png)
+
+### Inference Configuration 
+
+An inference configuration describes the Docker container and files to use when initializing your web service. The inference configuration below screenshot specifies that the machine learning deployment will use the file autoscore.py in the ./source_dir directory to process incoming requests and that it will use the Docker image with the Python packages specified in the project_environment environment.
+
+![image](https://user-images.githubusercontent.com/92014201/145519950-e1b62f6d-7687-4cc3-9cb7-386356cb461b.png)
+
+### Deployment Configuration 
+
+A deployment configuration specifies the amount of memory and cores your webservice needs in order to run. It also provides configuration details of the underlying webservice. 
+
+### Deployment 
+
+Model is deployment with the above configuration 
+
+![image](https://user-images.githubusercontent.com/92014201/145520213-81310799-2c45-4cc0-b805-666d5bc2a722.png)
+
+Querying with a Sample Input 
+
+2 data points from the Model is chosen as a Input one with a Bad Debt and another one without a Bad Debt , these 2 inputs are passed into the Model to check the predictions 
+to the end point. Final Prediction of the Model is shown in the below image for 0 and 1. Model has correctly classified the output as 0 and 1. 
+
+![image](https://user-images.githubusercontent.com/92014201/145520359-69d7ce20-2787-491c-9ad3-b1cdcca3f63b.png)
+
+### Deployed Model as End point 
+
+Status showing Healthy 
+
+![image](https://user-images.githubusercontent.com/92014201/145531608-d70d9640-d32f-4e9e-9c5d-9bd83fa91152.png)
+
+Application Insights enabled 
+
+![image](https://user-images.githubusercontent.com/92014201/145531687-06167b89-bb97-4890-b26d-bcae353eb48d.png)
 
 
 
