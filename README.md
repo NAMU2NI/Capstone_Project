@@ -72,11 +72,16 @@ As discussed in the above  , primary metric was changed from "AUC WEIGHTED" to "
 Screenshot of the Model showing , "NORM_MACRO_RECALL" as a primiary metric and its corresponding accuracy 
 ![image](https://user-images.githubusercontent.com/92014201/144283199-80ce26c0-2fc8-4111-bb8d-48f494d948f8.png)
 
-Below screenshot shows the confusion metrics in which the Overall Accuracy has dropped to 94% but Recall Accuracy has increased to 82% which means that the False Negatives are minimum , here in this case it is only 5. And also the True Postives have improved to 23 right predictions.  
-![image](https://user-images.githubusercontent.com/92014201/144283941-28f5dbd0-b308-4f0d-9628-d047afb6766b.png) 
+Below screenshot shows the confusion metrics in which the Overall Accuracy has dropped to 86% but Recall Accuracy has increased to 75% which means that the False Negatives are minimum , here in one of the child runs there is a Sampling has happened hence there is more positives than we see here in the below screenshot. 
+
+![image] ![image](https://user-images.githubusercontent.com/92014201/145675615-bb2708bd-a39d-4a58-b235-701a0f97cdbe.png)
+
+
 
 Model showing the current run status in the Model 
-![image](https://user-images.githubusercontent.com/92014201/144284614-feaac719-9596-4c17-98b2-6c109c742d04.png)
+![image](https://user-images.githubusercontent.com/92014201/145675698-68e6c7cd-2e0c-4dd4-9983-45be2e46a2e1.png)
+
+![image](https://user-images.githubusercontent.com/92014201/145675712-7a08b87e-978f-451d-b72a-a10c7dad1b40.png)
 
 
 
@@ -158,15 +163,20 @@ to the end point. Final Prediction of the Model is shown in the below image for 
 ### Deployed Model as End point 
 
 Status showing Healthy 
+ 
+![image](https://user-images.githubusercontent.com/92014201/145675756-32603e56-054b-4c45-887f-9d5fe351c991.png)
 
-![image](https://user-images.githubusercontent.com/92014201/145531608-d70d9640-d32f-4e9e-9c5d-9bd83fa91152.png)
+### Query the endpoint with a sample input
 
-Application Insights enabled 
+For querying the endpoint, we used the REST call by importing the requests Here are the steps with REST call:
 
+a) Store the scoring uri and primary key
+b) Create the header with key "Content-Type" and value "application/json" and set the Authorization with Bearer token
+c) Create the sample input and post to the requests. Here is the sample input:
 
-![image](https://user-images.githubusercontent.com/92014201/145531687-06167b89-bb97-4890-b26d-bcae353eb48d.png)
+when considering the sample input , i assisgned the values based on the feature importance such that the model predicts 2 different classes Bankrupt and Not a Bankrupt.In the first case , the variables which were chosen such that Credit limit , Fb ratings are extreme so that the first sample predicts the Bankrupt class. 
 
-
+![image](https://user-images.githubusercontent.com/92014201/145675803-caa5227d-98c9-46a7-91c4-06fa8cf3b942.png)
 
 
 
