@@ -183,5 +183,3 @@ when considering the sample input , i assisgned the values based on the feature 
 
 
 
-
-
