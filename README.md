@@ -15,6 +15,26 @@ As explained above ,the dataset used above is a combination of internal and exte
 
 Various features were collated for the model were aggregated at POC level , each row in the excel corresponds to one POC and it has 41 columns in total. Column name "FLAG_BAD_DEBT" corresponds to the Target column which tells whether a POC has gone bankrupt in the past or not. Objective for the Machine learning model is to study those Bankrupt POCs and Not a Bankrupty POC in detail using hte other 39 features and than simulate the same for the new data to get the Bankrupt POCs 
 
+Data 	Details 
+Payer	Customer ID which gets beverages from the Manufacturer
+Bankruptcy month	Month on which the Customer in the history has gone bankrupt 
+FLAG_BAD_DEBT	Target variable , 0 indicates no bankruptcy , 1 indicates bankruptcy 
+# POCs	Number of outlets one customer has 
+Rent	Rent which is paid by the customer to the company 
+Average Receivables	Whats the average receivables Manufacturer gets from the customer 
+Average Overdue	Whats the average due amount from the customer 
+Payment Term Days	Agreed Payment term days between Customer and Manufacturer 
+Payment Behavior Status	Based on the historical payments done by the customer , Manufacturer have clustered the data 
+Credit Limit	Credit amount assigned by the Manufacturer to customer 
+Std Dev AR	Standard deviation of the Average receivables 
+Max Credit Utilization	Max ratio of the Recievables to the Credit limit 
+Avg Credit Utilization	Avg ratio of the Recievables to the Credit limit 
+fb_rating	Ratings of the consumers to the particular POC , data scrapped from FB 
+
+![image](https://user-images.githubusercontent.com/92014201/145835634-fe9be912-419a-480c-93e0-5ea4c91150de.png)
+
+
+
 ### Task
 *TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
 As discussed in the above previous steps , Objective is predict the Bankrupt POCs which will help the BM to mitigates its risk exposure. Several features were built like Standard devaiation of Account receivables , Average credit utlization based on the detailed understanding of the data. 
