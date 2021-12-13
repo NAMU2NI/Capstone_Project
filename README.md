@@ -17,18 +17,31 @@ Various features were collated for the model were aggregated at POC level , each
 
 Data 	Details 
 Payer	Customer ID which gets beverages from the Manufacturer
+
 Bankruptcy month	Month on which the Customer in the history has gone bankrupt 
+
 FLAG_BAD_DEBT	Target variable , 0 indicates no bankruptcy , 1 indicates bankruptcy 
-# POCs	Number of outlets one customer has 
+
+POCs	Number of outlets one customer has 
+
 Rent	Rent which is paid by the customer to the company 
+
 Average Receivables	Whats the average receivables Manufacturer gets from the customer 
+
 Average Overdue	Whats the average due amount from the customer 
+
 Payment Term Days	Agreed Payment term days between Customer and Manufacturer 
+
 Payment Behavior Status	Based on the historical payments done by the customer , Manufacturer have clustered the data 
+
 Credit Limit	Credit amount assigned by the Manufacturer to customer 
+
 Std Dev AR	Standard deviation of the Average receivables 
+
 Max Credit Utilization	Max ratio of the Recievables to the Credit limit 
+
 Avg Credit Utilization	Avg ratio of the Recievables to the Credit limit 
+
 fb_rating	Ratings of the consumers to the particular POC , data scrapped from FB 
 
 ![image](https://user-images.githubusercontent.com/92014201/145835634-fe9be912-419a-480c-93e0-5ea4c91150de.png)
