@@ -222,5 +222,8 @@ when considering the sample input , i assisgned the values based on the feature 
 
 https://www.youtube.com/watch?v=ebIWI5L63E8
 
+## Improvement of this project in the future 
+
+The best model had an FN accuracy of 72%  , we need to focus on how to improve this accuracy to reach 100% so that in the prediction all the customer which goes bankrupt are being predicted. At the same time , final recommendation can be in terms of probability apart from the prediction class  of 1 and 0. This proboablites will help is interms of confidence of taking a specific decision. For the business user , apart from the probablites of the prediction model dashboard which gives a clear visibility of a certain behaviour of the customers at a longer trend should be made available so that there is more transparecny in the analysis and it gives much visibility on the Predictions. 
 
 
