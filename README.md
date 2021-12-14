@@ -175,11 +175,24 @@ Specified as 20 , maximum number of models created to train the model with the a
 
 In the current below model , shows the 20 iterations which were trained by iterating on the various Hyper parameter tuning techniques 
 
+Paramters that were tuned are Estimators , Depth and max features
+
+![image](https://user-images.githubusercontent.com/92014201/146047833-d23372cb-bfc4-473e-aad1-36dc41dc31d3.png)
+
+Screenshot of the Best model and its accuracy
+
+![image](https://user-images.githubusercontent.com/92014201/146047745-b27eb914-3136-475e-95a3-6d6110cd7d9a.png)
+
+
 ![image](https://user-images.githubusercontent.com/92014201/144847989-7656e380-9ba7-4c45-b022-d399605a6010.png)
 
 Below figure shows the various Hyperparameter tuning factors and its corresponding accuracy , in the below case all the 20 iteration had the same accuracy of 25% 
 
 ![image](https://user-images.githubusercontent.com/92014201/144848147-13daac01-9ace-42f8-8395-faed6af2ab4c.png)
+
+Screenshot showing hte Best Hyperparameter Tuing model registered 
+
+![image](https://user-images.githubusercontent.com/92014201/146048112-485fc2da-d67b-48dd-b0d6-0ace9e8533a0.png)
 
 
 Conculsion : There were no best model from Hyperparameter tuning , all the model had same accuracy as shown in the above model. Hence for Deployment the Model from the Automl was used to deploy the model. 
