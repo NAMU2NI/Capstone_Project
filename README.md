@@ -124,6 +124,9 @@ Model showing the current run status in the Model
 ![image](https://user-images.githubusercontent.com/92014201/145675712-7a08b87e-978f-451d-b72a-a10c7dad1b40.png)
 
 
+#### Screenshot of the details of the best model with its run id:
+![image](https://user-images.githubusercontent.com/92014201/146045852-11cee8df-91c6-405d-b6be-2bb98b62fcde.png)
+
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
