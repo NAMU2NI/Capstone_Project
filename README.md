@@ -211,8 +211,9 @@ when considering the sample input , i assisgned the values based on the feature 
 
 ![image](https://user-images.githubusercontent.com/92014201/145675803-caa5227d-98c9-46a7-91c4-06fa8cf3b942.png)
 
+## Screen Cast of the Project 
 
-
+https://www.youtube.com/watch?v=ebIWI5L63E8
 
 
 
