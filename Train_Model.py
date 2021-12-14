@@ -10,16 +10,19 @@ import pandas as pd
 import os
 import argparse
 import joblib
+import sys
 
-from azureml.core.run import Run
+
+from azureml.core import Run, Experiment, Workspace
 from datetime import datetime
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from azureml.data.dataset_factory import TabularDatasetFactory
 from azureml.core import Dataset
+from sklearn.metrics import recall_score
 
 
-data = TabularDatasetFactory.from_delimited_files(path="https://raw.githubusercontent.com/NAMU2NI/Capstone_Project/main/payer_level_features.csv")
+data = TabularDatasetFactory.from_delimited_files(path="https://raw.githubusercontent.com/NAMU2NI/Capstone_Project/main/POC_level_features.csv")
 
 def one_hot_encode(data,list_columns,drop_original_columns=True):    
     #Reset index
@@ -46,7 +49,7 @@ def clean_data(data):
     
     x_df = data.to_pandas_dataframe().dropna()
     # Clean and one hot encode data
-    categorical_cols = ['Payment Term', 'Payment Behavior Status']
+    categorical_cols = ['Payment Behavior Status']
     x_df=one_hot_encode(x_df,categorical_cols,drop_original_columns=True)
     y_df = x_df.pop("FLAG_BAD_DEBT")
 
@@ -66,10 +69,10 @@ x_test = x_test.drop(['Payer', 'Bankruptcy month'], axis=1)
 y_train = y_train.astype('category')
 y_test = y_test.astype('category')
 
-## Building a Random forest Model 
-
-
+from azureml.core.run import Run
 run = Run.get_context()
+
+## Building a Random forest Model 
 
 def main():
 
@@ -90,12 +93,13 @@ def main():
     run.log("# of Jobs to run parallel :", np.int(args.n_jobs))
 
     model = RandomForestClassifier(n_estimators=args.n_estimators, max_depth=args.max_depth,max_features=args.max_features,
-    n_jobs=args.n_jobs).fit(x_train, y_train)
+    n_jobs=args.n_jobs).fit(x_train, y_train) 
 
-    accuracy = model.score(x_test, y_test)
-    run.log("Accuracy", np.float(accuracy))
+    Predictions = model.predict(x_test)
+    accuracy = recall_score(y_test, Predictions)
+    run.log("accuracy", np.float(accuracy))
     os.makedirs('./outputs', exist_ok=True)
-    joblib.dump(value=model, filename = './outputs/bkt-model-Hyp.joblib')
+    joblib.dump(value=model, filename = './outputs/bkt-model-Hyp.pkl')
 
 
 if __name__ == '__main__':
