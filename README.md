@@ -1,7 +1,14 @@
 # Capstone_Project
 
 ## Write a short introduction to your project.
-In this project , i am going to leverage Azure to predict whether an Account (Point of Contact/Customer) will go Bankrupt or not. This is very important because a Customer get a lot of products from the beverage Manufacturer. In order to do faster transactions , beverage manufacturer gives credit limit and Payment terms for its customers. But when the Customer goes bankrupt , the money which is in Credit will be lost to the beverage manufacturer so it is very much essential to the BM (beverage manufacturer) to set up the right credit limit and revise the credit limit often and also when we know in advance or if we are able to predict a customer going bankrupt than the BM can take necessary actions by reducing the credit limit or change the payment patterns for those customers so that the BM does not lose any money. Considering the COIVD era , there are lot of small customers went bankrtupt so it is very much essentail for any business to have this model which predicts the whether the customer will go bankrupt or not. Risk Exposure of the BM will be reduced by taking proactive actions based out of the predictive model. 
+In this project ,  i will be using both Hyperdrive and AutoML API from Azure ML to build this project to predict  whether an Account (Point of Contact/Customer) will go Bankrupt or not. I will not only the predict the model , i will also compare the results of Hyperparameter tuning model and Automl model and the best model out of them will be deployed as web service. After the deployment , we have used Rest API and SDK to predict its outcome. 
+
+![image](https://user-images.githubusercontent.com/92014201/146041981-31b30b6b-5215-4f46-8f54-4c148ad1bba1.png)
+
+
+### Business Context of the problem statement  
+
+This is very important because a Customer get a lot of products from the beverage Manufacturer. In order to do faster transactions , beverage manufacturer gives credit limit and Payment terms for its customers. But when the Customer goes bankrupt , the money which is in Credit will be lost to the beverage manufacturer so it is very much essential to the BM (beverage manufacturer) to set up the right credit limit and revise the credit limit often and also when we know in advance or if we are able to predict a customer going bankrupt than the BM can take necessary actions by reducing the credit limit or change the payment patterns for those customers so that the BM does not lose any money. Considering the COIVD era , there are lot of small customers went bankrtupt so it is very much essentail for any business to have this model which predicts the whether the customer will go bankrupt or not. Risk Exposure of the BM will be reduced by taking proactive actions based out of the predictive model. 
 
 
 ## Project Set Up and Installation
