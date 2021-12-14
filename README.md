@@ -126,6 +126,26 @@ Model showing the current run status in the Model
 
 #### Screenshot of the details of the best model with its run id:
 ![image](https://user-images.githubusercontent.com/92014201/146045852-11cee8df-91c6-405d-b6be-2bb98b62fcde.png)
+![image](https://user-images.githubusercontent.com/92014201/146046502-7f412b8b-2347-4bf9-9549-dc2fda8dbccf.png)
+
+Iteration 26 , shows the best model with the accuracy of 70% with Voting Ensemble as the best model in the above figure 
+
+##### The screen below shows that run has been completed and shows the VotingEnsemble as a best model
+
+![image](https://user-images.githubusercontent.com/92014201/146046718-c61cdae7-4c6b-4a5a-91e6-4a32940c5d9f.png)
+
+##### The below screen shows the parameters of the train model:
+
+![image](https://user-images.githubusercontent.com/92014201/146046979-f2681fab-ca10-42c9-9f07-3fc164567435.png)
+
+
+##### The below screen shows metrics details of the VotingEnsemble
+
+![image](https://user-images.githubusercontent.com/92014201/146047122-608f37f6-ea1c-4425-9e2d-a426fe901599.png)
+
+##### The screen below shows the environment dependencies:
+
+![image](https://user-images.githubusercontent.com/92014201/146047323-ed117854-6cee-46a8-97cd-430584431122.png)
 
 
 ## Hyperparameter Tuning
