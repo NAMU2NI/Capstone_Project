@@ -177,11 +177,17 @@ In the current below model , shows the 20 iterations which were trained by itera
 
 Paramters that were tuned are Estimators , Depth and max features
 
-![image](https://user-images.githubusercontent.com/92014201/146047833-d23372cb-bfc4-473e-aad1-36dc41dc31d3.png)
+![image](https://user-images.githubusercontent.com/92014201/146047833-d23372cb-bfc4-473e-aad1-36dc41dc31d3.png) 
+
+
+![image](https://user-images.githubusercontent.com/92014201/146313280-f6c1f4b5-bcef-444c-8c35-096eda3f7c0d.png)
+
 
 Screenshot of the Best model and its accuracy
 
 ![image](https://user-images.githubusercontent.com/92014201/146047745-b27eb914-3136-475e-95a3-6d6110cd7d9a.png)
+
+![image](https://user-images.githubusercontent.com/92014201/146313489-edd29ee6-5840-4e03-a082-9aafa3e65dcf.png)
 
 
 ![image](https://user-images.githubusercontent.com/92014201/144847989-7656e380-9ba7-4c45-b022-d399605a6010.png)
